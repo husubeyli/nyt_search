@@ -1,6 +1,6 @@
 const APIKey = "ukKxjOAEXfSFMX9wCvHvztHeaM3oxZ1V";
 
-$("#search").on("click", function() {
+$("#searchh").on("click", function() {
   let searchVal = $("#search_input").val().trim();
   let startDate = $("#start-date").val();
   let endDate = $("#end-date").val();
@@ -34,7 +34,7 @@ $("#search").on("click", function() {
   }
 });
 
-function isStorage(fromStorageData){
+function isStorage(fromStorageData){ //axtardigimiz title hisse ile daxil etdiyimiz soz uygun gelmediyi ucun islemir duzgun documentasiyaya baxib yeniden yazmaq lazimdi serti
     let sts = false;
     let searchVal = $("#search_input").val();
     fromStorageData.map(item => {  
@@ -45,7 +45,7 @@ function isStorage(fromStorageData){
     return sts;
 }
 
-function setStorage(key, value) { //axtardigimiz title hisse ile daxil etdiyimiz soz uygun gelmediyi ucun islemir duzgun documentasiyaya baxib yeniden yazmaq lazimdi serti
+function setStorage(key, value) { 
   let newData = JSON.stringify(value);
   localStorage.setItem(key, newData);
 }

@@ -23,14 +23,15 @@
                     <label for="search">Number of Records Retrieve:</label>
                     <select class="custom-select"  id="select">
                         <option value="1" selected>1</option>
+                        <option value="3">3</option>
                         <option value="5">5</option>
                         <option value="10">10</option>
                     </select>
                     <label for="search">Start Year:</label>
-                    <input type="text" id="start-date" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="search">
+                    <input type="text" id="start-date" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="search">
                     <label for="search">End Year:</label>
-                    <input type="text" id="end-date" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="search">
-                    <button type="button" class="btn btn-outline-primary" id="search" style="margin-top: 10px; margin-right: 5px;">Search</button>
+                    <input type="text" id="end-date" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="search">
+                    <button type="button" class="btn btn-outline-primary" id="searchh" style="margin-top: 10px; margin-right: 5px;">Search</button>
                     <button type="button" class="btn btn-outline-danger" onclick="clearPage()" id="clear" style="margin-top: 10px;">Clear</button>
                 </div>
             
@@ -40,7 +41,7 @@
     <div class="container" style="margin-bottom: 30px;">
         <div class="card">
             <div class="card-header" style="background-color:lightsteelblue;">Search Result</div>
-            <div class="card-body" id="news" style="padding: 20px;">
+            <div class="card" id="news" style="padding: 20px;">
                 <!-- <div class="well" id="article-well-1">
                     <h3 class="articleHeadline">
                         <span class="label label-primary">1. </span>
