@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New York Times Search</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.0.0/collection/components/icon/icon.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+            <div class="jumbotron" style="height: 150px; display: flex; justify-content: center; align-items: center; background-color: #20315A ; color: white;">
+                
+                <h1 class="text-center"></ion-icon>New York Times Search</h1>
+            </div>
+            <div class="card">
+                <div class="card-header" style="background-color: lightskyblue;">Search Parameters</div>
+                <div style="padding: 20px;">
+                    <label for="search">Search Term:</label>
+                    <input type="text" id="search_input" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="search">
+                    <label for="search">Number of Records Retrieve:</label>
+                    <select class="custom-select"  id="select">
+                        <option value="1" selected>1</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label for="search">Start Year:</label>
+                    <input type="text" id="start-date" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="search">
+                    <label for="search">End Year:</label>
+                    <input type="text" id="end-date" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="search">
+                    <button type="button" class="btn btn-outline-primary" id="search" style="margin-top: 10px; margin-right: 5px;">Search</button>
+                    <button type="button" class="btn btn-outline-danger" onclick="clearPage()" id="clear" style="margin-top: 10px;">Clear</button>
+                </div>
+            
+            </div>
+        </div>
+        <br>
+    <div class="container" style="margin-bottom: 30px;">
+        <div class="card">
+            <div class="card-header" style="background-color:lightsteelblue;">Search Result</div>
+            <div class="card-body" id="news" style="padding: 20px;">
+                <!-- <div class="well" id="article-well-1">
+                    <h3 class="articleHeadline">
+                        <span class="label label-primary">1. </span>
+                        <strong> Smith-Corona Elects Officer to New Post</strong>
+                    </h3>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/js/nyt.js"></script>
+</body>
+</html>
